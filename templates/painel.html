@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Painel</title></head>
+<body>
+  <h2>Bem-vindo, {{ usuario }}</h2>
+  <a href="/logout">Sair</a>
+  <table border="1">
+    <tr><th>ID</th><th>Cliente</th><th>CNPJ</th><th>Status</th><th>Data</th><th>Caminho</th></tr>
+    {% for item in dados %}
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.cliente_id }}</td>
+        <td>{{ item.cnpj }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.data }}</td>
+        <td>{{ item.caminho }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
